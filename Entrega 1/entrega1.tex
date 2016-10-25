@@ -1,0 +1,45 @@
+\documentclass[spanish, a4paper, 12pt] {article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{mathtools}
+\usepackage{anysize}
+%\marginsize{2cm}{2cm}{2cm}{3cm}
+\newcommand\eqdef{\stackrel{\mathclap{\mbox{\tiny{def}}}}{=}}
+\newcommand\eqac{\stackrel{\mathclap{\mbox{*}}}{=}}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{verbatim}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\begin{document}
+\title{Entrega 1}
+\author{Marco Antonio Garrido Rojo\thanks{\url{https://github.com/MaSteve/EDIF} Esta entrega puede encontrarse en GitHub.}}
+\date{}
+\maketitle
+Sea la función $g(x) = 5x^{\frac{4}{5}}$ a lo largo del ejercicio.
+\begin{itemize}
+\item{
+\textbf{Apartado 1} Estudia la continuidad y derivabilidad de la función $g(x), x \in \mathbb{R}$. Determinar si es lipschitziana en algún intervalo $[-r, r], r > 0$.
+
+La continuidad de esta función se justifica rápidamente por composición de funciones continuas (elevar a la cuarta es continua en todo $\mathbb{R}$, la raiz quinta no da problemas en $\mathbb{R}^{+} \cup \{0\}$ y el producto por escalares tampoco).
+
+La derivabilidad tiene algo más de gracia. $g'(x) = \frac{4}{\sqrt[5]{x}}$ que claramente no está definida en el cero, donde cuenta con una asíntota.
+
+Visto esto último, la función claramente no puede ser lipschitziana en ese intervalo porque, apoyándonos en la definición de derivada y en que esta no está acotada para $g(x)$, tenemos que $\forall \varepsilon > 0$, $\exists \delta > 0$ $/$ $\forall x_0 \in I$, $|x_0 - x| < 0 \Rightarrow |\frac{g(x_0)-g(x)}{x_0 - x} - g'(x)| < \varepsilon$ donde $x$ lo cogemos distinto de $0$ pero lo suficientemente cercano a este valor para que $|g'(x)| > K + \varepsilon$, donde $K$ sería una supuesta constante de Lipschitz que fracasa para cualquier valor positivo.
+}
+\item{
+\textbf{Apartado 2} Justifica que si $D_1 = \{(t,x): x > 0\}$ y $D_2 = \{(t,x): x < 0\}$, para cada $(t_0, x_0) \in D_j$ y $j = 1, 2$, el (PVI) dado por $x' = g(x)$, $x(t_0) = x_0$ tiene solución maximal $x(t), t \in (\alpha, \omega)$ única con $(t, x(t))$, $t \in (\alpha, \omega)$ en el correspondiente dominio $D_j$. Calcula la solución maximal para $t_0 = 1$ y $x_0 = 32$, indicando cuál es su dominio.
+
+En primer lugar, utilizando el Teorema de existencia y unicidad, tenemos garantizada la existencia y unicidad (¿qué si no?) de soluciones para cada punto de los $D_j$, $j = 1, 2$. Ahora solo tenemos que justificar que dichas soluciones pueden ser maximales.
+
+Utilizando un corolario
+
+}
+\end{itemize}
+\end{document}
